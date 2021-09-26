@@ -8,18 +8,21 @@ const Header: React.FC = () => {
   const OnClickHome = useCallback(() => {
     history.push('/');
   }, []);
+
   const OnClickAbout = useCallback(() => {
     history.push('/about');
   }, []);
+
   const OnClickWorks = useCallback(() => {
     history.push('/works');
   }, []);
+
   const OnClickContact = useCallback(() => {
     history.push('/contact');
   }, []);
 
   return (
-    <div className="bg-yellow-300">
+    <div className="bg-gray-100 flex justify-around items-center h-12">
       <h1 className="text-gray-400 font-header">MY PORTFOLIO</h1>
       <Links
         OnClickHome={OnClickHome}
