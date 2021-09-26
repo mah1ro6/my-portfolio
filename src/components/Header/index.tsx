@@ -1,10 +1,32 @@
-import React from 'react';
-import Router from '../../Router';
+import React, { useCallback } from 'react';
+import Links from '../Links';
+import { useHistory } from 'react-router';
 
 const Header: React.FC = () => {
+  const history = useHistory();
+
+  const OnClickHome = useCallback(() => {
+    history.push('/');
+  }, []);
+  const OnClickAbout = useCallback(() => {
+    history.push('/about');
+  }, []);
+  const OnClickWorks = useCallback(() => {
+    history.push('/works');
+  }, []);
+  const OnClickContact = useCallback(() => {
+    history.push('/contact');
+  }, []);
+
   return (
-    <div>
-      <Router />
+    <div className="bg-yellow-300">
+      <h1 className="text-gray-400 font-header">MY PORTFOLIO</h1>
+      <Links
+        OnClickHome={OnClickHome}
+        OnClickAbout={OnClickAbout}
+        OnClickWorks={OnClickWorks}
+        OnClickContact={OnClickContact}
+      />
     </div>
   );
 };

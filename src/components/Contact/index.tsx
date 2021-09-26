@@ -4,7 +4,7 @@ import React from 'react';
 const Contact: React.FC = () => {
   return (
     <div>
-      <h1 className="font-bold">hello,Contact</h1>
+      hello,Contact
     </div>
   );
 };
