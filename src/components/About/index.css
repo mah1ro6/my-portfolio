@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  p {
+    @apply font-body font-thin leading-loose text-left underline
+  }
+
+  dd, dt {
+    @apply font-body leading-loose
+  }
+
+  dd {
+    @apply font-thin
+  }
+}

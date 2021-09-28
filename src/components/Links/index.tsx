@@ -12,17 +12,17 @@ const Links: React.FC<Props> = (props) => {
     <div className="">
       <nav>
         <ul className="flex justify-start">
-          <li className="pl-10 text-gray-400 hover:opacity-75">
-            <button onClick={props.OnClickHome}>Home</button>
+          <li className="list-none pl-10 text-gray-400 hover:opacity-75">
+            <button className="border-none bg-gray-100 text-gray-400" onClick={props.OnClickHome}>Home</button>
           </li>
-          <li className="pl-10 text-gray-400 hover:opacity-75">
-            <button onClick={props.OnClickAbout}>About</button>
+          <li className="list-none pl-10 text-gray-400 hover:opacity-75">
+            <button className="border-none bg-gray-100 text-gray-400" onClick={props.OnClickAbout}>About</button>
           </li>
-          <li className="pl-10 text-gray-400 hover:opacity-75">
-            <button onClick={props.OnClickWorks}>Works</button>
+          <li className="list-none pl-10 text-gray-400 hover:opacity-75">
+            <button className="border-none bg-gray-100 text-gray-400" onClick={props.OnClickWorks}>Works</button>
           </li>
-          <li className="pl-10 text-gray-400 hover:opacity-75">
-            <button onClick={props.OnClickContact}>Contact</button>
+          <li className="list-none pl-10 text-gray-400 hover:opacity-75">
+            <button className="border-none bg-gray-100 text-gray-400" onClick={props.OnClickContact}>Contact</button>
           </li>
         </ul>
       </nav>

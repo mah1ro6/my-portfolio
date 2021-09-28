@@ -3,7 +3,7 @@ import About from '../components/About';
 import Home from '../components/Home';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
-import { HeaderLayout } from '../layout/HeaderLayout';
+import HeaderLayout from '../Page';
 import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
 
 const Router: React.FC = () => {

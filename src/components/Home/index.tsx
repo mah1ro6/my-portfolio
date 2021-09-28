@@ -1,7 +1,12 @@
 import React from 'react';
+import './index.css'
 
 const Home: React.FC = () => {
-  return <div className="clear-both bg-red-300 min-h-screen w-4/5 mx-auto">hello,home</div>;
+  return (
+    <div>
+      <h1 className=''>hello</h1>
+    </div>
+  );
 };
 
 export default Home;
