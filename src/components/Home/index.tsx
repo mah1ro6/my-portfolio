@@ -1,10 +1,14 @@
 import React from 'react';
-import './index.css'
+import '../style/index.css';
 
 const Home: React.FC = () => {
   return (
-    <div>
-      <h1 className=''>hello</h1>
+    <div className="m-0">
+      <img
+        src="../../img/home_bg.jpg"
+        alt="ホーム画面の画像"
+        className="bg-cover bg-center max-w-full min-h-screen"
+      />
     </div>
   );
 };

@@ -5,7 +5,7 @@
 
 @layer base {
   p {
-    @apply font-body font-thin leading-loose text-left underline
+    @apply font-body font-thin leading-loose
   }
 
   dd, dt {
@@ -15,4 +15,14 @@
   dd {
     @apply font-thin
   }
+
+  dt{
+    @apply font-semibold float-left
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+
 }
+
