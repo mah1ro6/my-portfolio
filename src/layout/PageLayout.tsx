@@ -8,13 +8,12 @@ type Props = {
 
 const PageLayout: React.FC<Props> = (props) => {
   const history = useHistory();
-  console.log(history)
   return (
     <div
       className={
         history.location.pathname === '/'
           ? 'h-auto'
-          : 'h-auto w-3/5 mx-auto mt-20'
+          : 'h-auto w-3/5 mx-auto mt-20 mb-32'
       }
     >
       {props.children}

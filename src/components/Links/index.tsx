@@ -39,7 +39,8 @@ const Links: React.FC<Props> = (props) => {
         {buttonData.map((data) => (
           <li key={data.item} className="list-none pl-10 text-gray-400 hover:opacity-75">
             <button
-              className="border-none bg-gray-100 text-gray-400"
+              id='header-link'
+              className="text-gray-400 transition duration-500 ease-in-out"
               onClick={data.props}
             >
               {data.item}
