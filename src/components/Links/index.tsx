@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useHistory } from 'react-router-dom';
 
 type Props = {
   OnClickHome: () => void;
@@ -9,11 +9,13 @@ type Props = {
 };
 
 type ButtonData = {
-  item: string,
-  props: () => void
-}
+  item: string;
+  props: () => void;
+};
 
 const Links: React.FC<Props> = (props) => {
+  const history = useHistory();
+
   const buttonData: ButtonData[] = [
     {
       item: 'Home',
@@ -37,10 +39,21 @@ const Links: React.FC<Props> = (props) => {
     <nav>
       <ul className="flex justify-start">
         {buttonData.map((data) => (
-          <li key={data.item} className="list-none pl-10 text-gray-400 hover:opacity-75">
+          <li
+            key={data.item}
+            className={
+              history.location.pathname === '/'
+                ? 'pl-16 pr-16 text-gray-700 hover:opacity-60'
+                : 'pl-5 pr-5 text-gray-700  hover:opacity-75'
+            }
+          >
             <button
-              id='header-link'
-              className="text-gray-400 transition duration-500 ease-in-out"
+              id="header-link"
+              className={
+                history.location.pathname === '/'
+                  ? 'transition duration-500 ease-in-out tracking-wider underline'
+                  : 'transition duration-500 ease-in-out underline'
+              }
               onClick={data.props}
             >
               {data.item}

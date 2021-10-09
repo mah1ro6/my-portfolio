@@ -25,11 +25,19 @@ const Header: React.FC = () => {
     <div
       className={
         history.location.pathname === '/'
-          ? 'bg-black flex justify-around items-center h-24'
+          ? 'bg-black flex flex-col justify-between items-center absolute top-1/3 bg-opacity-0 w-full h-44'
           : 'bg-gray-100 flex justify-around items-center h-24 shadow'
       }
     >
-      <h1 className="text-gray-400 font-serif text-2xl">MY PORTFOLIO</h1>
+      <h1
+        className={
+          history.location.pathname === '/'
+            ? 'text-gray-700 font-mono font-extralight tracking-widest'
+            : 'text-gray-700 tracking-widest font-serif text-2xl'
+        }
+      >
+        {history.location.pathname === '/' ?"Welcome To MY PORTFOLIO ":"MY PORTFOLIO"}
+      </h1>
       <Links
         OnClickHome={OnClickHome}
         OnClickAbout={OnClickAbout}
