@@ -30,6 +30,7 @@ const Header: React.FC = () => {
       }
     >
       <h1
+        id='header-top'
         className={
           history.location.pathname === '/'
             ? 'text-gray-700 font-mono font-extralight tracking-widest'

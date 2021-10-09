@@ -43,7 +43,7 @@ const Links: React.FC<Props> = (props) => {
             key={data.item}
             className={
               history.location.pathname === '/'
-                ? 'pl-16 pr-16 text-gray-700 hover:opacity-60'
+                ? 'pl-16 pr-16 text-gray-700 hover:opacity-60 transition duration-500 ease-in-out'
                 : 'pl-5 pr-5 text-gray-700  hover:opacity-75'
             }
           >
