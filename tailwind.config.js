@@ -2,6 +2,11 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      // backgroundImage: theme => {(
+      //   'home-background': "url('./public/img/000011.JPG')",
+      // )}
+    },
     fontFamily: {
       //   'header': ['Helvetica', 'Arial', 'sans-serif'],
       //   // 'header': ['Economica', 'sans-serif'],
@@ -17,7 +22,6 @@ module.exports = {
       ],
       top: ['Lato', 'sans-serif'],
     },
-    extend: {},
   },
   variants: {
     extend: {},

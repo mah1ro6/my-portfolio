@@ -11,7 +11,7 @@ const HeaderLayout: React.FC<Props> = (props) => {
     <div>
       <Header />
       <PageLayout>{props.children}</PageLayout>
-      <footer className="text-center bg-white border font-top tracking-wide">my portfolio</footer>
+      <footer className="text-center bg-gray-100 border font-top tracking-wide">my portfolio</footer>
     </div>
   );
 };

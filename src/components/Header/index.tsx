@@ -22,7 +22,13 @@ const Header: React.FC = () => {
   }, []);
 
   return (
-    <div className="bg-gray-100 flex justify-around items-center h-24 shadow">
+    <div
+      className={
+        history.location.pathname === '/'
+          ? 'bg-black flex justify-around items-center h-24'
+          : 'bg-gray-100 flex justify-around items-center h-24 shadow'
+      }
+    >
       <h1 className="text-gray-400 font-serif text-2xl">MY PORTFOLIO</h1>
       <Links
         OnClickHome={OnClickHome}
