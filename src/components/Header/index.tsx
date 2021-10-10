@@ -25,8 +25,8 @@ const Header: React.FC = () => {
     <div
       className={
         history.location.pathname === '/'
-          ? 'bg-black flex flex-col justify-between items-center absolute top-1/3 bg-opacity-0 w-full h-44'
-          : 'bg-gray-100 flex justify-around items-center h-24 shadow'
+          ? 'flex flex-col justify-between items-center absolute top-1/3 bg-opacity-0 w-full h-44 '
+          : 'bg-gray-50 flex justify-around items-center h-24 shadow'
       }
     >
       <h1

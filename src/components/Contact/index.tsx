@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-full h-16 leading-16 block mx-auto bg-gray-300 rounded-lg mt-16 shadow hover:bg-gray-400 hover:text-white md:mt-24"
+          className="w-64 h-16 leading-16 block mx-auto bg-gray-300 rounded-lg mt-16 shadow hover:bg-gray-400 hover:text-white md:mt-24 md:w-full"
         >
           送信
         </button>

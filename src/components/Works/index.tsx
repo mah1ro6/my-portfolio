@@ -54,7 +54,7 @@ const Works: React.FC = () => {
     <div>
       <h1 className="font-thin tracking-widest text-5xl mb-24 md:text-center sm:text-center">Works</h1>
       <div className="mb-40">
-        <h2 className="font-normal tracking-widest text-4xl text-center underline">
+        <h2 className="font-normal tracking-widest text-4xl text-center underline text-gray-700">
           Skills
         </h2>
         <div className="flex justify-center flex-wrap md:justify-around">
@@ -67,7 +67,7 @@ const Works: React.FC = () => {
         </div>
       </div>
       <div>
-        <h2 className="font-normal tracking-widest text-4xl text-center underline">
+        <h2 className="font-normal tracking-widest text-4xl text-center underline text-gray-700">
           Production
         </h2>
         {productionsData.map((data) => (
