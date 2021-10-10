@@ -28,13 +28,13 @@ const About: React.FC = () => {
 
   return (
     <>
-      <h1 className="font-thin tracking-widest text-5xl mb-12">About</h1>
-      <div className="mb-20 text-center md:text-left">
-        <p>佐賀大学理工学部の応用化学コースに在籍しております。</p>
-        <p>2020年の12月からプログラミング勉強開始。</p>
-        <p>2021年の5月より受託開発の企業にて、アルバイト。</p>
-        <p>現在、就職活動中。。。</p>
-        <p>
+      <h1 className="font-thin tracking-widest text-5xl mb-12 sm:text-center">About</h1>
+      <div className="mb-20 text-center md:text-left sm:text-center">
+        <p className="md:mb-2 sm:mb-3">佐賀大学理工学部の応用化学コースに在籍しております。</p>
+        <p className="md:mb-2 sm:mb-3">2020年の12月からプログラミング勉強開始。</p>
+        <p className="md:mb-2 sm:mb-3">2021年の5月より受託開発の企業にて、アルバイト。</p>
+        <p className="md:mb-2 sm:mb-3">現在、就職活動中。。。</p>
+        <p className="md:mb-2 sm:mb-3">
           目標は、フロントエンドエンジニアまたは、Webディレクターへの就職を目指しております。
         </p>
       </div>
@@ -43,7 +43,7 @@ const About: React.FC = () => {
           <img
             src="../../img/about_img.jpg"
             alt="顔写真"
-            className="w-48 h-48"
+            className="w-48 h-48 sm:mx-auto"
           />
         </div>
         <div className="">
