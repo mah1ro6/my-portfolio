@@ -2,14 +2,14 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {
-      // backgroundImage: theme => {(
-      //   'home-background': "url('./public/img/000011.JPG')",
-      // )}
+    screens: {
+      xl: { max: '1279px' },
+      lg: { max: '1023px' },
+      md: { max: '864px' },
+      sm: { max: '639px' },
     },
+    extend: {},
     fontFamily: {
-      //   'header': ['Helvetica', 'Arial', 'sans-serif'],
-      //   // 'header': ['Economica', 'sans-serif'],
       body: [
         'Helvetica',
         '游ゴシック',
