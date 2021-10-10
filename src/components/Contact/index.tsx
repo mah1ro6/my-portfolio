@@ -69,11 +69,11 @@ const Contact: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-left font-thin tracking-widest text-5xl mb-12">
+      <h1 className="text-left font-thin tracking-widest text-5xl mb-12 md:mb-16 sm:text-center">
         Contact
       </h1>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="mt-8">
+        <div className="mt-8 md:mt-11">
           <label className="float-left mb-3">貴社名（任意）</label>
           <input
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -87,7 +87,7 @@ const Contact: React.FC = () => {
             </span>
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 md:mt-11">
           <label className="float-left mb-3">お名前</label>
           <input
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -101,7 +101,7 @@ const Contact: React.FC = () => {
             </span>
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 md:mt-11">
           <label className="float-left mb-3">メールアドレス</label>
           <input
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
@@ -115,7 +115,7 @@ const Contact: React.FC = () => {
             </span>
           )}
         </div>
-        <div className="mt-8">
+        <div className="mt-8 md:mt-11">
           <label className="float-left mb-3">お問い合わせ内容</label>
           <textarea
             placeholder="こちらにお問い合わせ内容を入力してください"
@@ -132,7 +132,7 @@ const Contact: React.FC = () => {
         </div>
         <button
           type="submit"
-          className="w-64 h-16 leading-16 block mx-auto bg-gray-300 rounded-lg mt-16 shadow hover:bg-gray-400 hover:text-white"
+          className="w-full h-16 leading-16 block mx-auto bg-gray-300 rounded-lg mt-16 shadow hover:bg-gray-400 hover:text-white md:mt-24"
         >
           送信
         </button>
