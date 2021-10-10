@@ -21,15 +21,15 @@ const About: React.FC = () => {
       titleContent: '行動力と継続力',
     },
     {
-      title: 'その他',
-      titleContent: '趣味が海外ドラマ鑑賞です！',
+      title: '趣味',
+      titleContent: '海外ドラマ🎥'
     },
   ];
 
   return (
     <>
-      <h1 className="font-thin tracking-widest text-5xl mb-12 ">About</h1>
-      <div className="mb-20 text-center text-left sm:text-left">
+      <h1 className="font-thin tracking-widest text-5xl mb-12">About</h1>
+      <div className="mb-20 text-center md:text-left">
         <p>佐賀大学理工学部の応用化学コースに在籍しております。</p>
         <p>2020年の12月からプログラミング勉強開始。</p>
         <p>2021年の5月より受託開発の企業にて、アルバイト。</p>
@@ -38,20 +38,20 @@ const About: React.FC = () => {
           目標は、フロントエンドエンジニアまたは、Webディレクターへの就職を目指しております。
         </p>
       </div>
-      <div className="flex justify-between ">
-        <div>
+      <div className="flex justify-between md:flex-col">
+        <div className="mb-20">
           <img
             src="../../img/about_img.jpg"
             alt="顔写真"
             className="w-48 h-48"
           />
         </div>
-        <div>
+        <div className="">
           <dl>
             {profile.map((data) => (
-              <div key={data.title} className="flex content-center justify-between ml-8">
-                <dt>{data.title} :</dt>
-                <dd className="ml-28">{data.titleContent === "宮崎 聖大" ? data.titleContent + '(ミヤザキマヒロ)' : data.titleContent}</dd>
+              <div key={data.title} className="flex content-center justify-start ml-8 md:ml-0">
+                <dt className="whitespace-nowrap mr-8">{data.title} :</dt>
+                <dd className="whitespace-nowrap">{data.titleContent === "宮崎 聖大" ? data.titleContent + '(ミヤザキマヒロ)' : data.titleContent}</dd>
               </div>
             ))}
           </dl>
@@ -62,3 +62,9 @@ const About: React.FC = () => {
 };
 
 export default About;
+
+
+
+
+// 次やること
+//   デフォルトがモバイルファーストになっているから、変更する
