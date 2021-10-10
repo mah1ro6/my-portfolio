@@ -52,15 +52,15 @@ const Works: React.FC = () => {
 
   return (
     <div>
-      <h1 className="font-thin tracking-widest text-5xl mb-24">Works</h1>
+      <h1 className="font-thin tracking-widest text-5xl mb-24 md:text-center sm:text-center">Works</h1>
       <div className="mb-40">
         <h2 className="font-normal tracking-widest text-4xl text-center underline">
           Skills
         </h2>
-        <div className="flex justify-center flex-wrap">
+        <div className="flex justify-center flex-wrap md:justify-around">
           {skillsData.map((data) => (
-            <div key={data.name} className="w-1/3 m-0 text-center mt-20">
-              <img className="w-32 h-32 inline-block" src={data.src} alt="" />
+            <div key={data.name} className="w-1/3 m-0 text-center mt-20 md:w-5/12 sm:w-full">
+              <img className="w-32 h-32 inline-block" src={data.src} alt="スキルのロゴ" />
               <p className="font-light mt-6">{data.name}</p>
             </div>
           ))}
