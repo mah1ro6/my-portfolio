@@ -77,7 +77,10 @@ const Works: React.FC = () => {
             </h2>
             <img src={data.src} className="w-full block mx-auto h-auto mt-10" />
             <p className="font-thin font-body text-gray-600 tracking-wide mt-6">{data.text}</p>
-            <a href={data.url} className="text-green-400 underline mt-6">
+            <a href={data.url} 
+            target="_blank"
+            rel="noreferrer"
+            className="text-green-400 underline mt-6">
               こちらから飛べます
             </a>
           </div>

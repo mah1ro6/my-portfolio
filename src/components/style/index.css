@@ -17,7 +17,7 @@
   }
 
   dt {
-    @apply font-semibold float-left;
+    @apply font-semibold float-left md:float-none;
   }
 
   h1 {
