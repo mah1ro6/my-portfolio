@@ -43,7 +43,7 @@ const About: React.FC = () => {
         </p>
         <p className="md:mb-2 sm:mb-3">現在、就職活動中。。。</p>
         <p className="md:mb-2 sm:mb-3">
-          目標は、フロントエンドエンジニアまたは、Webディレクターへの就職を目指しております。
+          目標はフロントエンドエンジニア、またはWebディレクターへの就職を目指しております。
         </p>
       </div>
       <div className="flex justify-around md:flex-col">
