@@ -52,15 +52,24 @@ const Works: React.FC = () => {
 
   return (
     <div>
-      <h1 className="font-thin tracking-widest text-5xl mb-24 md:text-center sm:text-center">Works</h1>
+      <h1 className="font-thin tracking-widest text-5xl mb-24 md:text-center sm:text-center">
+        Works
+      </h1>
       <div className="mb-40">
         <h2 className="font-normal tracking-widest text-4xl text-center underline text-gray-700">
           Skills
         </h2>
-        <div className="flex justify-center flex-wrap md:justify-around">
+        <div className="flex justify-center flex-wrap md:justify-between">
           {skillsData.map((data) => (
-            <div key={data.name} className="w-1/3 m-0 text-center mt-20 md:w-5/12 sm:w-full">
-              <img className="w-32 h-32 inline-block" src={data.src} alt="スキルのロゴ" />
+            <div
+              key={data.name}
+              className="w-1/3 m-0 text-center mt-20 md:w-5/12 sm:w-full"
+            >
+              <img
+                className="w-32 h-32 inline-block"
+                src={data.src}
+                alt="スキルのロゴ"
+              />
               <p className="font-light mt-6">{data.name}</p>
             </div>
           ))}
@@ -71,16 +80,23 @@ const Works: React.FC = () => {
           Production
         </h2>
         {productionsData.map((data) => (
-          <div key={data.url} className="flex flex-col content-center justify-center mt-24">
+          <div
+            key={data.url}
+            className="flex flex-col content-center justify-center mt-24"
+          >
             <h2 className="font-thin text-2xl font-body text-gray-600 tracking-wider">
               {data.production}
             </h2>
             <img src={data.src} className="w-full block mx-auto h-auto mt-10" />
-            <p className="font-thin font-body text-gray-600 tracking-wide mt-6">{data.text}</p>
-            <a href={data.url} 
-            target="_blank"
-            rel="noreferrer"
-            className="text-green-400 underline mt-6">
+            <p className="font-thin font-body text-gray-600 tracking-wide mt-6">
+              {data.text}
+            </p>
+            <a
+              href={data.url}
+              target="_blank"
+              rel="noreferrer"
+              className="text-green-400 underline mt-6"
+            >
               こちらから飛べます
             </a>
           </div>

@@ -26,7 +26,7 @@ const Header: React.FC = () => {
       className={
         history.location.pathname === '/'
           ? 'flex flex-col justify-around items-center absolute top-1/3 bg-opacity-0 w-full h-1/3 sm:justify-between'
-          : 'bg-gray-50 flex justify-around items-center h-24 shadow'
+          : 'bg-gray-50 flex justify-around items-center h-24 shadow md:flex-col'
       }
     >
       <h1
@@ -37,9 +37,7 @@ const Header: React.FC = () => {
             : 'text-gray-700 tracking-widest font-serif text-2xl'
         }
       >
-        <span className="">
-          {history.location.pathname === '/' ? 'Welcome To ' : null}
-        </span>
+        <span>{history.location.pathname === '/' ? 'Welcome To ' : null}</span>
         {history.location.pathname === '/' ? (
           <span>
             <br />

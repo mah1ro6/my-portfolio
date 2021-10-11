@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useForm, } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
-
 
 type FormData = {
   corporateName: string;

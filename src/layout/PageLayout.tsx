@@ -12,7 +12,7 @@ const PageLayout: React.FC<Props> = (props) => {
     <div
       className={
         history.location.pathname === '/'
-          ? 'h-screen w-screen'
+          ? ''
           : 'h-auto w-3/5 mx-auto mt-20 mb-32'
       }
     >

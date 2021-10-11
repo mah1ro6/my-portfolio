@@ -37,14 +37,14 @@ const Links: React.FC<Props> = (props) => {
 
   return (
     <nav>
-      <ul className="flex justify-start flex-wrap sm:justify-center sm:mt-10">
+      <ul className="flex justify-start flex-wrap sm:justify-center">
         {buttonData.map((data) => (
           <li
             key={data.item}
             className={
               history.location.pathname === '/'
                 ? 'pl-16 pr-16 text-gray-700 transition duration-500 ease-in-out text-2xl hover:opacity-60 md:text-center md:mt-8 md:pl-6 md:pr-6 sm:pl-4 sm:pr-4 md:w-1/2 '
-                : 'pl-5 pr-5 text-gray-700  hover:opacity-75'
+                : 'pl-5 pr-5 text-gray-700  hover:opacity-75 sm:justify-around'
             }
           >
             <button

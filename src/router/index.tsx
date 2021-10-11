@@ -4,7 +4,7 @@ import Home from '../components/Home';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
 import HeaderLayout from '../Page';
-import { BrowserRouter, Switch, Route, useHistory } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Router: React.FC = () => {
   return (
