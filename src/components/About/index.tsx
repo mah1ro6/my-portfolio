@@ -31,7 +31,7 @@ const About: React.FC = () => {
       <h1 className="font-thin tracking-widest text-5xl mb-12 sm:text-center">
         About
       </h1>
-      <div className="mb-20 text-center md:text-left sm:text-center">
+      <div className="mb-20 text-center md:text-left ">
         <p className="md:mb-2 sm:mb-3">
           佐賀大学理工学部の応用化学コースに在籍しております。
         </p>
