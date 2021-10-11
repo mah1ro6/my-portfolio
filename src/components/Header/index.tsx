@@ -25,19 +25,28 @@ const Header: React.FC = () => {
     <div
       className={
         history.location.pathname === '/'
-          ? 'flex flex-col justify-between items-center absolute top-1/3 bg-opacity-0 w-full h-44 '
+          ? 'flex flex-col justify-around items-center absolute top-1/3 bg-opacity-0 w-full h-1/3 sm:justify-between'
           : 'bg-gray-50 flex justify-around items-center h-24 shadow'
       }
     >
       <h1
-        id='header-top'
+        id="header-top"
         className={
           history.location.pathname === '/'
-            ? 'text-gray-700 font-mono font-extralight tracking-widest'
+            ? 'text-gray-600 font-mono font-extralight tracking-widest text-center sm:text-4xl'
             : 'text-gray-700 tracking-widest font-serif text-2xl'
         }
       >
-        {history.location.pathname === '/' ?"Welcome To MY PORTFOLIO ":"MY PORTFOLIO"}
+        <span className="">
+          {history.location.pathname === '/' ? 'Welcome To ' : null}
+        </span>
+        {history.location.pathname === '/' ? (
+          <span>
+            <br />
+            <br />
+          </span>
+        ) : null}
+        MY PORTFOLIO
       </h1>
       <Links
         OnClickHome={OnClickHome}

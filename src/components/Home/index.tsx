@@ -3,11 +3,11 @@ import '../style/index.css';
 
 const Home: React.FC = () => {
   return (
-    <div>
+    <div className='h-screen w-auto'>
       <img
         src="../../img/home-bg.jpg"
         alt="ホーム画面の画像"
-        className="max-h-screen w-full"
+        className="min-h-screen w-full md:w-screen"
       />
     </div>
   );
