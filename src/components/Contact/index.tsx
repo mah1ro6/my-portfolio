@@ -33,6 +33,7 @@ const Contact: React.FC = () => {
       body: JSON.stringify(payload),
     });
   };
+
   const onSubmit = (data: FormData) => {
     return new Promise((resolve) => {
       setTimeout(() => {
@@ -46,6 +47,7 @@ const Contact: React.FC = () => {
     if (isSubmitSuccessful) {
       reset();
       successNotify();
+      setInquiryLength('');
     }
   }, [isSubmitSuccessful]);
 
@@ -92,7 +94,7 @@ const Contact: React.FC = () => {
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             type="text"
             placeholder="山田 一郎"
-            {...register('name', { required: true })}
+            {...register('name', { required: true, maxLength: 100 })}
           />
           {errors.name && (
             <span className="text-red-500 float-left">
@@ -106,7 +108,7 @@ const Contact: React.FC = () => {
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             type="text"
             placeholder="sample@example.co.jp"
-            {...register('mailAddress', { required: true })}
+            {...register('mailAddress', { required: true, maxLength: 100, pattern: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/ })}
           />
           {errors.mailAddress && (
             <span className="text-red-500 float-left">
@@ -119,10 +121,10 @@ const Contact: React.FC = () => {
           <textarea
             placeholder="こちらにお問い合わせ内容を入力してください"
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-            {...register('inquiry', { required: true, maxLength: 100 })}
+            {...register('inquiry', { required: true, maxLength: 255 })}
             onChange={handleChange}
           />
-          <p className="float-right">{inquiryLength.length}/100</p>
+          <p className="float-right">{inquiryLength.length}/255</p>
           {errors.inquiry && (
             <span className="text-red-500 float-left">
               ※お問い合わせ内容を正確に入力してください
