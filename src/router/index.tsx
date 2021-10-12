@@ -3,7 +3,7 @@ import About from '../components/About';
 import Home from '../components/Home';
 import Works from '../components/Works';
 import Contact from '../components/Contact';
-import HeaderLayout from '../Page';
+import PageLayout from '../Page';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Router: React.FC = () => {
@@ -11,24 +11,24 @@ const Router: React.FC = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <HeaderLayout>
+          <PageLayout>
             <Home />
-          </HeaderLayout>
+          </PageLayout>
         </Route>
         <Route exact path="/about">
-          <HeaderLayout>
+          <PageLayout>
             <About />
-          </HeaderLayout>
+          </PageLayout>
         </Route>
         <Route exact path="/works">
-          <HeaderLayout>
+          <PageLayout>
             <Works />
-          </HeaderLayout>
+          </PageLayout>
         </Route>
         <Route exact path="/contact">
-          <HeaderLayout>
+          <PageLayout>
             <Contact />
-          </HeaderLayout>
+          </PageLayout>
         </Route>
       </Switch>
     </BrowserRouter>

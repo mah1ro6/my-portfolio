@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react';
 import { useHistory } from 'react-router-dom';
-import Home from '../components/Home';
+
 
 type Props = {
   children: ReactNode;
