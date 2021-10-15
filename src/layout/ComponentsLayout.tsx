@@ -13,7 +13,7 @@ const PageLayout: React.FC<Props> = (props) => {
       className={
         history.location.pathname === '/'
           ? ''
-          : 'h-auto w-3/5 mx-auto mt-20 mb-32'
+          : 'h-auto w-3/5 mx-auto mt-20 mb-32 sm:w-2/3'
       }
     >
       {props.children}

@@ -46,7 +46,7 @@ const Works: React.FC = () => {
       src: '../../img/photo-search-app.png',
       production: '画像検索アプリ',
       text:
-        'React × TypeScript × firebase で作成したアプリです。\n非同期処理やTypeScriptの良いアウトプットになりました。',
+        'React × TypeScript × Firebase で作成したアプリです。\n非同期処理やTypeScriptの良いアウトプットになりました。',
     },
   ];
 
@@ -87,7 +87,7 @@ const Works: React.FC = () => {
             <h2 className="font-thin text-2xl font-body text-gray-600 tracking-wider">
               {data.production}
             </h2>
-            <img src={data.src} className="w-full block mx-auto h-auto mt-10" />
+            <img src={data.src} className="w-full block mx-auto h-auto mt-10 rounded-md" />
             <p className="font-thin font-body text-gray-600 tracking-wide mt-6">
               {data.text}
             </p>

@@ -7,7 +7,7 @@ const Home: React.FC = () => {
       <img
         src="../../img/home-bg.jpg"
         alt="ホーム画面の画像"
-        className="min-h-screen w-full object-cover md:w-screen"
+        className="max-h-screen w-screen min-h-screen object-cover md:w-screen"
       />
     </div>
   );
