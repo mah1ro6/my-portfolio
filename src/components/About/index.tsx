@@ -61,7 +61,7 @@ const About: React.FC = () => {
                 key={data.title}
                 className="flex content-center justify-start ml-8 md:ml-0"
               >
-                <dt className="whitespace-nowrap mr-8">{data.title} :</dt>
+                <dt className="whitespace-nowrap mr-8 sm:mr-4">{data.title} :</dt>
                 <dd className="whitespace-nowrap">
                   {data.titleContent === '宮崎 聖大'
                     ? data.titleContent + '(ミヤザキ マヒロ)'
