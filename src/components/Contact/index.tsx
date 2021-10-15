@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import { resolve } from 'path';
+import React, { useEffect, useMemo, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -40,13 +41,17 @@ const Contact: React.FC = () => {
         sendMessage(data);
         resolve(false);
       }, 2500);
+      toast.loading('送信中です');
+    }).then(() => {
+      toast.remove();
+      successNotify();
     });
   };
 
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
-      successNotify();
+      // successNotify();
       setInquiryLength('');
     }
   }, [isSubmitSuccessful]);
@@ -108,7 +113,11 @@ const Contact: React.FC = () => {
             className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
             type="text"
             placeholder="sample@example.co.jp"
-            {...register('mailAddress', { required: true, maxLength: 100, pattern: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/ })}
+            {...register('mailAddress', {
+              required: true,
+              maxLength: 100,
+              pattern: /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]{1,}.[A-Za-z0-9]{1,}$/,
+            })}
           />
           {errors.mailAddress && (
             <span className="text-red-500 float-left">
