@@ -35,15 +35,23 @@ const Links: React.FC<Props> = (props) => {
     },
   ];
 
+  const resButtonData: ButtonData[] = buttonData.filter((data) => {
+    if (history.location.pathname === '/') {
+      return data.item !== 'Home';
+    } else {
+      return data;
+    }
+  });
+
   return (
     <nav>
       <ul className="flex justify-start flex-wrap w-full md:mb-3 sm:justify-center">
-        {buttonData.map((data) => (
+        {resButtonData.map((data) => (
           <li
             key={data.item}
             className={
               history.location.pathname === '/'
-                ? 'pl-16 pr-16 text-gray-700 transition duration-500 ease-in-out text-2xl hover:opacity-60 md:text-center md:mt-8 md:pl-6 md:pr-6 sm:pl-4 sm:pr-4 md:w-1/2 '
+                ? 'pl-16 pr-16 text-gray-700 text-2xl hover:opacity-60 md:text-center md:mt-8 md:pl-6 md:pr-6 sm:pl-4 sm:pr-4 md:w-1/2 '
                 : 'pl-5 pr-5 text-gray-700 sm:pl-3 sm:pr-3 hover:opacity-75'
             }
           >
@@ -51,8 +59,8 @@ const Links: React.FC<Props> = (props) => {
               id="header-link"
               className={
                 history.location.pathname === '/'
-                  ? 'transition duration-500 ease-in-out tracking-wider underline font-light'
-                  : 'transition duration-500 ease-in-out underline'
+                  ? 'tracking-wider underline font-light'
+                  : 'underline'
               }
               onClick={data.props}
             >

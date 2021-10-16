@@ -24,15 +24,3 @@
     @apply text-5xl;
   }
 }
-
-#header-link,#header-top {
-  transition:all .5s ease-in-out;
-}
-
-#header-link :hover {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1),
-    0 0 50px rgba(255, 255, 255, 0.8), 0 0 75px rgba(255, 255, 255, 0.6),
-    0 0 76px rgba(255, 255, 255, 0.4), 0 0 77px rgba(255, 255, 255, 0.5),
-    0 0 78px rgba(255, 255, 255, 0.4), 0 0 79px rgba(255, 255, 255, 0.3),
-    0 0 80px rgba(255, 255, 255, 0.2), 0 0 85px rgba(255, 255, 255, 0.1);
-}

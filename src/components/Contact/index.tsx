@@ -1,5 +1,4 @@
-import { resolve } from 'path';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -51,7 +50,6 @@ const Contact: React.FC = () => {
   useEffect(() => {
     if (isSubmitSuccessful) {
       reset();
-      // successNotify();
       setInquiryLength('');
     }
   }, [isSubmitSuccessful]);
