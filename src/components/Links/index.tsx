@@ -51,7 +51,7 @@ const Links: React.FC<Props> = (props) => {
             key={data.item}
             className={
               history.location.pathname === '/'
-                ? 'pl-16 pr-16 text-gray-700 text-2xl hover:opacity-60 md:text-center md:mt-8 md:pl-6 md:pr-6 sm:pl-4 sm:pr-4 md:w-1/2 '
+                ? 'pl-12 pr-12 text-gray-700 text-2xl hover:opacity-60 md:text-center md:mt-8 md:pl-6 md:pr-6 sm:pl-4 sm:pr-4 md:w-1/3 sm:w-full '
                 : 'pl-5 pr-5 text-gray-700 sm:pl-3 sm:pr-3 hover:opacity-75'
             }
           >
