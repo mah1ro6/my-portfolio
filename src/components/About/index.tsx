@@ -5,6 +5,10 @@ interface Profile {
   title: string;
   titleContent: string;
 }
+interface SkillsData {
+  src: string;
+  name: string;
+}
 
 const About: React.FC = () => {
   const profile: Profile[] = [
@@ -26,12 +30,42 @@ const About: React.FC = () => {
     },
   ];
 
+  const skillsData: SkillsData[] = [
+    {
+      src: '../../img/html-5.svg',
+      name: 'HTML',
+    },
+    {
+      src: '../../img/tailwindcss-icon.svg',
+      name: 'Tailwind CSS',
+    },
+    {
+      src: '../../img/react.svg',
+      name: 'React',
+    },
+    {
+      src: '../../img/nextjs.svg',
+      name: 'Next.js',
+    },
+    {
+      src: '../../img/typescript-icon.svg',
+      name: 'TypeScript',
+    },
+    {
+      src: '../../img/unity.svg',
+      name: 'Unity',
+    },
+  ];
+
   return (
     <>
       <h1 className="font-thin tracking-widest text-5xl mb-12 sm:text-center">
         About
       </h1>
       <div className="mb-20 text-center md:text-left ">
+        <h2 className="font-normal tracking-widest text-4xl mb-20 text-center underline text-gray-700">
+          About Me
+        </h2>
         <p className="md:mb-2 sm:mb-3">
           佐賀大学理工学部の応用化学コースに在籍しております。
         </p>
@@ -46,7 +80,7 @@ const About: React.FC = () => {
           目標はフロントエンドエンジニア、またはWebディレクターへの就職を目指しております。
         </p>
       </div>
-      <div className="flex justify-around md:flex-col">
+      <div className="flex justify-around mb-10 md:flex-col">
         <div className="mb-20">
           <img
             src="../../img/about_img.jpg"
@@ -61,7 +95,9 @@ const About: React.FC = () => {
                 key={data.title}
                 className="flex content-center justify-start ml-8 md:ml-0"
               >
-                <dt className="whitespace-nowrap mr-8 sm:mr-4">{data.title} :</dt>
+                <dt className="whitespace-nowrap mr-8 sm:mr-4">
+                  {data.title} :
+                </dt>
                 <dd className="whitespace-nowrap">
                   {data.titleContent === '宮崎 聖大'
                     ? data.titleContent + '(ミヤザキ マヒロ)'
@@ -70,6 +106,26 @@ const About: React.FC = () => {
               </div>
             ))}
           </dl>
+        </div>
+      </div>
+      <div className="mb-40">
+        <h2 className="font-normal tracking-widest text-4xl text-center underline text-gray-700">
+          Skills
+        </h2>
+        <div className="flex justify-center flex-wrap md:justify-between">
+          {skillsData.map((data) => (
+            <div
+              key={data.name}
+              className="w-1/3 m-0 text-center mt-20 md:w-5/12 sm:w-full"
+            >
+              <img
+                className="w-32 h-32 inline-block"
+                src={data.src}
+                alt="スキルのロゴ"
+              />
+              <p className="font-light mt-6">{data.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </>
