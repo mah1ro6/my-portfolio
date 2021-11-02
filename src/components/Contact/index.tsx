@@ -76,7 +76,7 @@ const Contact: React.FC = () => {
       <h1 className="text-left font-thin tracking-widest text-5xl mb-12 md:mb-16 sm:text-center">
         Contact
       </h1>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} method='POST'>
         <div className="mt-8 md:mt-11">
           <label className="float-left mb-3">貴社名（任意）</label>
           <input
