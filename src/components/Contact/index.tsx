@@ -20,6 +20,7 @@ const Contact: React.FC = () => {
   });
 
   const [inquiryLength, setInquiryLength] = useState<string>('');
+  const [disabled, setDisabled] = useState<boolean>(false);
 
   const sendMessage = (data: FormData) => {
     const payload = {
@@ -34,18 +35,19 @@ const Contact: React.FC = () => {
     });
   };
 
-  const onSubmit = (data: FormData) => {
-    return new Promise((resolve) => {
+  const onSubmit = async (data: FormData) => {
+    await new Promise((resolve) => {
       setTimeout(() => {
         sendMessage(data);
         resolve(false);
       }, 2500);
       toast.loading('送信中です');
-    }).then(() => {
-      toast.remove();
-      successNotify();
-    });
-  };
+      setDisabled(true);
+    })
+    toast.remove();
+    successNotify();
+    setDisabled(false)
+    };
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -69,7 +71,7 @@ const Contact: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInquiryLength(e.target.value);
-  };
+  };  
 
   return (
     <div>
@@ -141,6 +143,7 @@ const Contact: React.FC = () => {
         <button
           type="submit"
           className="w-64 h-16 leading-16 block mx-auto bg-gray-300 rounded-lg mt-16 shadow hover:bg-gray-400 hover:text-white md:mt-24 md:w-full"
+          disabled={disabled}
         >
           送信
         </button>
