@@ -34,18 +34,17 @@ const Contact: React.FC = () => {
     });
   };
 
-  const onSubmit = (data: FormData) => {
-    return new Promise((resolve) => {
+  const onSubmit = async (data: FormData) => {
+    await new Promise((resolve) => {
       setTimeout(() => {
         sendMessage(data);
         resolve(false);
       }, 2500);
       toast.loading('送信中です');
-    }).then(() => {
-      toast.remove();
-      successNotify();
-    });
-  };
+    })
+    toast.remove();
+    successNotify();
+    };
 
   useEffect(() => {
     if (isSubmitSuccessful) {
@@ -69,7 +68,8 @@ const Contact: React.FC = () => {
 
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setInquiryLength(e.target.value);
-  };
+  };  
+  
 
   return (
     <div>
